@@ -208,8 +208,8 @@ with st.spinner("Fetching data from GitHub...") and st.container(horizontal_alig
             with col2:
                 st.link_button("Github","https://github.com/devashishpan")
         # Render the Graph
-        st.subheader("Daily Contribution Timeline")
-        st.line_chart(df, y="Contributions", use_container_width=True,)
+        st.subheader("Daily Contribution Timeline(Last 30 Days)")
+        st.line_chart(df.tail(30), y="Contributions", width="stretch")
 
         # Optional: Show data table toggle
         #with st.expander("View Raw Data Table"):
